@@ -1,5 +1,12 @@
 <html>
   <body>
+    <script>function getLang() {
+  if (navigator.languages != undefined) 
+    return navigator.languages[0]; 
+  return navigator.language;
+}
+    
+  console.log(getLang())</script>
     Hello!
   </body>
 </html>
