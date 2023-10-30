@@ -1,12 +1,66 @@
 <html>
-  <body>
-    <script>function getLang() {
-  if (navigator.languages != undefined) 
-    return navigator.languages[0]; 
-  return navigator.language;
-}
-    
-  console.log(getLang())</script>
-    Hello!
-  </body>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+
+		<title>Quantum Core</title>
+  	</head>
+  	<body style="background-color: #111111; color: #fff; font-weight: 200; font-family: 'Roboto Condensed', sans-serif;">
+  		<style>
+  			.general {
+  				display: flex;
+  				margin-top: 3em;
+  				margin-left: 5em;
+  			}
+
+  			.generalDescription {
+  				margin-left: 5em;
+  			}
+
+			.nav__light {
+			  background-color: #3CA1FF;
+			  width: 100%;
+			  height: 115px;
+			  filter: blur(280px);
+			}
+
+			.buttonInvite {
+				border: 2px solid rgb(255, 255, 255, 0.3);
+				padding: 15px 30px;
+				color: #fff; 
+				text-decoration: none;
+				font-weight: 300;
+				font-size: 25px;
+			}
+
+			.buttonInvite:hover {
+				border: 2px solid rgb(255, 255, 255, 0.5);
+			}
+
+
+  		</style>
+  		<div class="nav__light"></div>
+    	<div class="general">
+	 	 	<img style="border-radius: 25px; width: 75px; height: 75px;" src="https://images-ext-1.discordapp.net/external/DIkOismXj4B5YyvIl13mieGrvAp-vrmtmXgA39Qa33Y/https/cdn.discordapp.com/avatars/1130834452008947792/7b48f064a571ddb4c4ea2217fe2902ff.webp">
+
+	  		<p id="hiQuantum" style="font-size: 40px; margin-top: 18.5px; margin-left: 35px; font-weight: 300; height: 0px;">Привет, Quantum Core!</p>
+		</div>
+		<div class="generalDescription">
+			<p id="descQuantum" style="width: 35em; font-size: 22.5px;">— быстрорастущий проект, команда талантливых и креативных программистов, готовых выпускать необычные, переворачивающих мир, продукты, а так же для реализации самых креативных идей.<br><br>Один из наших ботов <span style="font-weight: 400">It's Quantum Bot</span> в Discord - уже активно набирает популярность и имеет весь необходимый функционал для работы с сервером: Модерация, Экономика, Интерактивные Игры, а главное - кастомные слеш-команды с их программированием. Попробуйте!</p><br>
+			<a id="buttonInvite" href="/" class="buttonInvite">Присоединиться в Discord</a>
+		</div>
+    	<script>
+    		let lang = navigator.languages[0] || 'en-EN'
+    		if(lang == 'ru-RU') {
+    			document.getElementById("hiQuantum").innerText = `Привет, Quantum Core!`
+    			document.getElementById("descQuantumChapter1").innerHTML = `— быстрорастущий проект, команда талантливых и креативных программистов, готовых выпускать необычные, переворачивающих мир, продукты, а так же для реализации самых креативных идей.<br><br>Один из наших ботов <span style="font-weight: 400">It's Quantum Bot</span> в Discord - уже активно набирает популярность и имеет весь необходимый функционал для работы с сервером: Модерация, Экономика, Интерактивные Игры, а главное - кастомные слеш-команды с их программированием. Попробуйте!`
+    			document.getElementById("buttonInvite").innerText = `Присоединиться в Discord`
+    		} else {
+    			document.getElementById("hiQuantum").innerText = 'Hello, Quantum Core!'
+    			document.getElementById("descQuantum").innerHTML = `— a fast-growing project, a team of talented and creative programmers who are ready to produce unusual, world-changing products, as well as to implement the most creative ideas.<br><br>One of our bots <span style="font-weight: 400">It's Quantum Bot</span> in Discord is already actively gaining popularity and has all the necessary functionality to work with the server: Moderation, Economics, Interactive Games, and most importantly - custom slash commands with their programming. Try it!`
+    			document.getElementById("buttonInvite").innerText = `Join Discord`
+    		}
+    	</script>
+  	</body>
 </html>
